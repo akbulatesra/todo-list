@@ -18,7 +18,8 @@ function checkFunction(elem) {
 // Yeni görev eklemeye yarayan fonksiyon
 
 function addFunction(){
-    if(document.querySelector('#newTask').value.length == 0){
+    let task= document.querySelector('#newTask')
+    if(task.value.length == 0){
         alert("Please Enter a Task")
     }
     else{
@@ -28,13 +29,15 @@ function addFunction(){
                 <div class="line">
                     <div class="right">
                         <input type="checkbox" class="myCheck" onclick="checkFunction(this)" data-index=${index}>
-                        <span class="text">${document.querySelector('#newTask').value}</span>
+                        <span class="text">${task.value}</span>
                     </div>
                     <button class="myButton" onclick="removeTask(this.dataset.index)" data-index=${index}>   
                         <i class="material-icons">delete</i></button>
                 </div>
             </label>
-        `;}
+        `;
+        task.value= ""
+    }
 } 
 
 //Görevi silmeye yarayan fonksiyon
