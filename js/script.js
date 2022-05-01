@@ -24,7 +24,8 @@ function addFunction(){
     }
     else{
         index = adder()
-        document.querySelector('#tasks').innerHTML += `
+        const tasks = document.querySelector("#tasks")
+        let newTask= `
             <label class="myLabel" data-index=${index}>
                 <div class="line">
                     <div class="right">
@@ -36,6 +37,9 @@ function addFunction(){
                 </div>
             </label>
         `;
+        tasks.insertAdjacentHTML("beforeend", newTask);
+
+
         task.value= ""
     }
 } 
