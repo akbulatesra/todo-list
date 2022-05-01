@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="mt-5">
+        <div class="col-sm-8 offset-sm-2">
+            <h3 id="title">
+            <span style="margin-right:2%" class="material-icons">assignment
+            </span>To Do List</h3>
+            <div class="input-group mb-3">
+                <input type="text" 
+                class="form-control" 
+                id="newTask" 
+                placeholder="Tasks..." 
+                aria-label="Tasks..." 
+                aria-describedby="button-addon2">
+                <button onclick="addFunction()" 
+                class="btn btn-warning" 
+                type="submit" 
+                id="button-addon2">Add</button>
+            </div>
+        </div>
+        <div class="col-sm-8 offset-sm-2">
+          <label class="myLabel" data-index=0>
+            <div class="line">
+              <div class="right">
+                <input type="checkbox" class="myCheck" onclick="checkFunction(this)" data-index=0>
+                <span class="text">First Task</span>
+              </div>
+              <button class="myButton" onclick="removeTask(this.dataset.index)" data-index=0>
+              <i class="material-icons">delete</i></button>
+            </div>
+          </label>
+          <label class="myLabel" data-index=1>
+            <div class="line">
+              <div class="right">
+                <input type="checkbox" class="myCheck" onclick="checkFunction(this)" data-index=1>
+                <span class="text">Second Task</span>
+              </div>
+              <button class="myButton" onclick="removeTask(this.dataset.index)" data-index=1>
+              <i class="material-icons">delete</i></button>
+            </div>
+          </label>
+          <label class="myLabel" data-index=2>
+            <div class="line">
+              <div class="right">
+                <input type="checkbox" class="myCheck" onclick="checkFunction(this)" data-index=2>
+                <span class="text">Third Task</span>
+              </div>
+              <button class="myButton" onclick="removeTask(this.dataset.index)" data-index=2>
+              <i class="material-icons">delete</i></button>
+            </div>
+          </label>
+          <span id="tasks"></span>
+
+          
+        </div>
+    </div>
+</div>
+    
+
+<script src="/js/script.js"></script>    
+</body>
+</html>

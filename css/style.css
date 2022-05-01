@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+* {
+    font-family: 'Merriweather', serif; 
+}
+
+#title {
+    text-align: center;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ced4da;
+    margin-bottom: 1em;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.myCheck {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+label {
+    display:block;
+    background-color: #ffc107;
+    border-radius: 0.25rem; 
+   }
+   
+.myLabel:hover {
+    background:rgb(158, 157, 157) !important;
+    cursor:pointer;
+   }
+
+.myButton {
+    border: none;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.myCheck:checked ~ .text {
+    text-decoration: line-through;
+}
